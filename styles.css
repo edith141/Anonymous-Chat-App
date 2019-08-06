@@ -1,5 +1,22 @@
 /* width */
-
+.chat-list::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .chat-list::-webkit-scrollbar-track {
+    background: #0f041d; 
+  }
+  
+  /* Handle */
+  .chat-list::-webkit-scrollbar-thumb {
+    background: rgb(15, 116, 119); 
+  }
+  
+  /* Handle on hover */
+  .chat-list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .container {
     max-width: 500px;
