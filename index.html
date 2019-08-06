@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0f041d" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Monoton|Press+Start+2P&display=swap" rel="stylesheet">
 
     <title>AnonChat</title>
 </head>
@@ -15,7 +17,7 @@
 <body>
 
     <div class="container my-4">
-        <h1 class="my-4 text-center text-light"><span class="blur">Anon</span>Chat</h1>
+        <h1 class="my-4 text-center heading text-light"><span class="blur">Anon</span>Chat</h1>
 
         <div class="chat-rooms-btns mb-3 text-light text-center">
                 <div class="alert alert-info alert-dismissible fade show d-none" role="alert">
@@ -55,7 +57,7 @@
                 <!-- <div class="input-group-prepend">
                         <div class="input-group-text">New Message</div>
                     </div> -->
-                <input type="text" name="" id="msg" class="form-control" required>
+                <input type="text" placeholder="Type a message" name="" id="msg" class="form-control" required>
                 <div class="input-group-append">
                     <button type="submit" value="send" class="btn send-btns btn-danger">
                         <i class="fas fa-paper-plane"></i>
@@ -70,7 +72,7 @@
                 <!-- <div class="input-group-prepend">
                         <div class="input-group-text">Update Name</div>
                     </div> -->
-                <input type="text" name="" id="name" class="form-control" required>
+                <input type="text" placeholder="Update username" name="" id="name" class="form-control" required>
                 <div class="input-group-append">
                     <button type="button" value="update" class="btn send-btns btn-info">
                         <i class="fas fa-user-edit fa-sm"></i>

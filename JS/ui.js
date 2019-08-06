@@ -12,7 +12,7 @@ class UI{
         const timeOfMsg = dateFns.distanceInWordsToNow(data.created_at.toDate(), {addSuffix: true});
         const htmlElem = `
             <li class = "list-group-item chatbubble">
-                <span class = "username">${data.username} </span>
+                <span class = "username">${data.username}: </span>
                 <span class = "message">${data.message} </span>
                 <div class = "timestamp">${timeOfMsg}</div>              
             </li>

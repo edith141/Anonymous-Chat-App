@@ -37,6 +37,12 @@
     /* margin-bottom: 0.5em; */
 }
 
+.heading{
+    font-family: 'Monoton', cursive;
+/* font-family: 'Press Start 2P', cursive; */
+/* font-family: 'Comfortaa', cursive; */
+}
+
 .chatbubble{
     border-radius: 5px;
     margin: 3px;
@@ -49,20 +55,24 @@
     overflow: hidden; 
     overflow-y: scroll;
     scroll-behavior: smooth;
+    font-family: 'Comfortaa', cursive;
+    
 }
 
 .blur{
-    filter:blur(4px);
-    -o-filter:blur(4px);
-    -ms-filter:blur(4px);
-    -moz-filter:blur(4px);
-    -webkit-filter:blur(4px);
+    filter:blur(3px);
+    -o-filter:blur(3px);
+    -ms-filter:blur(3px);
+    -moz-filter:blur(3px);
+    -webkit-filter:blur(3px);
 }
 
 .username{
-    font-weight: bold;
+    font-weight: 700;
 }
-
+.message{
+    font-weight: 300;
+}
 .timestamp{
     font-weight: lighter;
     font-size: 0.6em;
