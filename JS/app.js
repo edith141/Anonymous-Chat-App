@@ -10,7 +10,7 @@ else {
     document.querySelector('.alert-info').classList.remove('d-none')
     username = 'Anon';
 }
-const chatroom = new Chatroom('gaming', username);
+const chatroom = new Chatroom('general', username);
 const ui = new UI(chatList);
 
 chatroom.getchat((data) => {
