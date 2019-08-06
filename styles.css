@@ -10,7 +10,47 @@
 .btn-primary.raised:active, .btn-primary.raised.active {
 	background: #33a6cc;
 	box-shadow: none;
-	margin-bottom: -3px;
+	margin-bottom: -6px;
 	margin-top: 3px;
 }
 
+.btn.room{
+    margin-top: 6px;
+    /* margin-bottom: 0.5em; */
+}
+
+.chatbubble{
+    border-radius: 5px;
+    margin: 3px;
+    background: rgb(0,0,0, .5);
+    color: aliceblue;
+}
+
+.chat-list{
+    max-height: 57%;
+    overflow: hidden; 
+    overflow-y: scroll;
+}
+
+.blur{
+    filter:blur(4px);
+    -o-filter:blur(4px);
+    -ms-filter:blur(4px);
+    -moz-filter:blur(4px);
+    -webkit-filter:blur(4px);
+}
+
+.username{
+    font-weight: bold;
+}
+
+.timestamp{
+    font-weight: lighter;
+    font-size: 0.6em;
+    color: lightgray;
+    font-style: italic;
+}
+
+.send-btns{
+    margin: 
+}

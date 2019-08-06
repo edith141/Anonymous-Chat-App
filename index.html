@@ -14,53 +14,58 @@
 
 <body>
     
-    <div class="container my-4 text-light">
-        <h1 class="my-4 text-center">AnonChat</h1>
+    <div class="container my-4">
+        <h1 class="my-4 text-center text-light"><span class = "blur">Anon</span>Chat</h1>
         
-        <div class="chat-rooms mb-3 text-light text-center">
+        <div class="chat-rooms-btns mb-3 text-light text-center">
             <div class="my-2">Select ChatRoom</div>
-            <button class="btn btn-primary raised" id="general">#GENERAL</button>
-            <button class="btn btn-primary raised" id="gaming">#GAMING</button>
-            <button class="btn btn-primary raised" id="music">#MUSIC</button>
-            <button class="btn btn-primary raised" id="ninjas">#NINJA</button>
+            <button class="btn btn-primary raised room" id="general">#GENERAL</button>
+            <button class="btn btn-primary raised room" id="college">#COLLEGE</button>
+            <button class="btn btn-primary raised room" id="music">#MUSIC</button>
+            <button class="btn btn-primary raised room" id="movies">#MOVIES</button>
         </div>
         
         
         <!-- CHATS -->
-        <div class="chat-window">
+        <div class="chatting-area">
             <ul class="chat-list list-group">
                 
             </ul>
         </div>
         
         <!-- NEW MSG -->
-        <form action="" class="new-chat my-3">
+        <form class="new-chat-form my-3">
             <div class="input-group">
-                <div class="input-group-prepend">
+                <!-- <div class="input-group-prepend">
                     <div class="input-group-text">New Message</div>
-                </div>
-                <input type="text" name="" id="message" class="form-control" required>
+                </div> -->
+                <input type="text" name="" id="msg" class="form-control" required>
                 <div class="input-group-append">
-                    <input type="button" value="send" class="btn btn-danger">
+                    <button type="submit" value="send" class="btn send-btns btn-danger">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
                 </div>
             </div>
         </form>
         
         <!-- UPDATE NAME -->
-        <form action="" class="new-name my-3">
+        <form action="" class="new-name-form my-3">
             <div class="input-group">
-                <div class="input-group-prepend">
+                <!-- <div class="input-group-prepend">
                     <div class="input-group-text">Update Name</div>
-                </div>
-                <input type="text" name="" id="message" class="form-control" required>
+                </div> -->
+                <input type="text" name="" id="name" class="form-control" required>
                 <div class="input-group-append">
-                    <input type="button" value="update" class="btn btn-info">
+                    <button type="button" value="update" class="btn send-btns btn-info">
+                        <i class="fas fa-user-edit fa-sm"></i>
+                    </button>
                 </div>
             </div>
         </form>
     </div>
     
-    
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://kit.fontawesome.com/33c4382f99.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
@@ -83,16 +88,19 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
     </script>
-        <script src="JS/app.js"></script>
+        
         <script src="JS/chat.js"></script>
         <script src="JS/ui.js"></script>
+        <script src="JS/app.js"></script>
         <script src="three.r92.min.js"></script>
         <script src="vanta.net.min.js"></script>
         <script>
             VANTA.NET({
                 el: "html",
                 points: 8.00,
-                maxDistance: 17.00
+                maxDistance: 20.00,
+                color: 0xb3446,
+  backgroundColor: 0x100820
             })
         </script>
     </body>
