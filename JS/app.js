@@ -7,6 +7,7 @@ if (localStorage.getItem("username")){
     username =  localStorage.getItem("username");
 }
 else {
+    document.querySelector('.alert-info').classList.remove('d-none')
     username = 'Anon';
 }
 const chatroom = new Chatroom('gaming', username);
