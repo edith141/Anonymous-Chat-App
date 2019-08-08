@@ -22,20 +22,25 @@
     max-width: 500px;
 }
 
+.btn.room{
+    border: 0px;
+    margin-top: 6px;
+    /* margin-bottom: 0.5em; */
+}
+
+
 .btn-primary.raised {
-	box-shadow: 0 3px 0 0 #007299;
+    box-shadow: 0 3px 0 0 #007299;
+    border: 0px;
 }
 .btn-primary.raised:active, .btn-primary.raised.active {
 	background: #33a6cc;
 	box-shadow: none;
-	margin-bottom: -6px;
-	margin-top: 3px;
+	margin-bottom: 3px;
+    margin-top: 3px;
+    border: 0px;
 }
 
-.btn.room{
-    margin-top: 6px;
-    /* margin-bottom: 0.5em; */
-}
 
 .room-btn-txt {
   display: none;
