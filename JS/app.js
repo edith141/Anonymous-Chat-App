@@ -48,7 +48,8 @@ newNameForm.addEventListener('submit', (event)=> {
 })
 
 chatRoomButtons.addEventListener('click', (event)=>{
-    if(event.target.tagName == 'BUTTON'){
+    console.log(event.target.tagName);
+    if(event.target.tagName == 'BUTTON' || event.target.tagName == 'SPAN'){
         ui.clearChats();
         console.log(event.target.id);
         chatroom.changeRoom(event.target.id);
