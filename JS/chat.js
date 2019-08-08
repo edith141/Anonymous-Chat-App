@@ -6,6 +6,7 @@ class Chatroom {
         this.unsubscribe;
     }
 
+
     async addChat(message) {
         const now = new Date();
         const chat = {
@@ -27,7 +28,7 @@ class Chatroom {
             .onSnapshot((snapshot) => {
                 snapshot.docChanges().forEach((change) => {
                     if (change.type == 'added') {
-                        cb(change.doc.data())
+                        cb(change.doc)
                     }
                 })
             });
@@ -44,11 +45,22 @@ class Chatroom {
         if (this.unsubscribe){
             this.unsubscribe();
         }
+    }
 
-
+    delAllChats() {
+        this.unsubscribe = this.chats
+            .onSnapshot((snapshot) => {
+                snapshot.docChanges().forEach((change) => {
+                    if (change.type == 'added') {
+                        db.collection('chats').doc(change.doc.id).delete();
+                    }
+                })
+            });
     }
 
 }
+
+
 
 // chatroom.getchat();
 
