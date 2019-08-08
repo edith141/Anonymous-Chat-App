@@ -50,6 +50,7 @@ newNameForm.addEventListener('submit', (event)=> {
 chatRoomButtons.addEventListener('click', (event)=>{
     if(event.target.tagName == 'BUTTON'){
         ui.clearChats();
+        document.querySelector(`#${event.target.id}`).querySelector('.room-btn-txt').classList.remove('d-none');
         console.log(event.target.id);
         chatroom.changeRoom(event.target.id);
         chatroom.getchat((data)=> ui.renderElem(data));

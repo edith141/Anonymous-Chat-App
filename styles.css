@@ -37,6 +37,23 @@
     /* margin-bottom: 0.5em; */
 }
 
+.room-btn-txt {
+    display: none;
+}
+
+.btn.room:focus > .room-btn-txt {
+    display: inline;
+}
+
+.btn.room:hover > .room-btn-txt {
+    display: inline;
+}
+
+.btn.room:active > .room-btn-txt {
+    display: inline;
+}
+
+
 .heading{
     font-family: 'Monoton', cursive;
 /* font-family: 'Press Start 2P', cursive; */
