@@ -38,18 +38,24 @@
 }
 
 .room-btn-txt {
-    display: none;
+  display: none;
 }
 
-.btn.room:focus > .room-btn-txt {
+.btn.room:focus > .room-btn-txt, .fas {
     display: inline;
 }
 
-.btn.room:hover > .room-btn-txt {
+.btn.room:active > .room-btn-txt, .fas {
     display: inline;
 }
+
+/* .btn.room:hover > .room-btn-txt {
+    display: inline;
+} */
 
 .btn.room:active > .room-btn-txt {
+    transition: display 2s;
+    -webkit-transition: display 2s;
     display: inline;
 }
 
