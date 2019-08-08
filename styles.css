@@ -51,13 +51,19 @@
 }
 
 .chat-list{
-    max-height: 57%;
+    max-height: 300px;
     overflow: hidden; 
     overflow-y: scroll;
     scroll-behavior: smooth;
     font-family: 'Comfortaa', cursive;
     
 }
+
+/* .alerty{
+    max-height: 20%;
+    overflow: hidden scroll;
+
+} */
 
 .blur{
     filter:blur(3px);
@@ -78,6 +84,10 @@
     font-size: 0.6em;
     color: lightgray;
     font-style: italic;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    display: inline;
 }
 
 .send-btns{

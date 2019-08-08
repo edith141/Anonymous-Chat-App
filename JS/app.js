@@ -2,6 +2,14 @@ const chatList = document.querySelector('.chat-list');
 const newChatForm = document.querySelector('.new-chat-form');
 const newNameForm = document.querySelector('.new-name-form');
 const chatRoomButtons = document.querySelector('.chat-rooms-btns');
+let elm = 'html';
+VANTA.NET({
+    el: elm,
+    points: 8.00,
+    maxDistance: 20.00,
+    color: 0xb3446,
+    backgroundColor: 0x100820
+})
 // console.log(chatList);
 if (localStorage.getItem("username")){
     username =  localStorage.getItem("username");
@@ -10,7 +18,7 @@ else {
     document.querySelector('.alert-info').classList.remove('d-none')
     username = 'Anon';
 }
-const chatroom = new Chatroom('general', username);
+const chatroom = new Chatroom('', username);
 const ui = new UI(chatList);
 
 chatroom.getchat((data) => {
@@ -42,6 +50,6 @@ chatRoomButtons.addEventListener('click', (event)=>{
         console.log(event.target.id);
         chatroom.changeRoom(event.target.id);
         chatroom.getchat((data)=> ui.renderElem(data));
-
+        let elm = 'html';
     }
 })
