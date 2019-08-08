@@ -10,6 +10,8 @@ VANTA.NET({
     color: 0xb3446,
     backgroundColor: 0x100820
 })
+
+
 // console.log(chatList);
 if (localStorage.getItem("username")){
     username =  localStorage.getItem("username");
@@ -20,6 +22,7 @@ else {
 }
 const chatroom = new Chatroom('', username);
 const ui = new UI(chatList);
+//chatroom.delAllChats();
 
 chatroom.getchat((data) => {
     ui.renderElem(data);

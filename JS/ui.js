@@ -8,8 +8,8 @@ class UI{
     }
     
     
-    renderElem(data){
-        const timeOfMsg = dateFns.distanceInWordsToNow(data.created_at.toDate(), {addSuffix: true});
+    renderElem(doc){
+        const timeOfMsg = dateFns.distanceInWordsToNow(doc.data().created_at.toDate(), {addSuffix: true});
         // const htmlElem = `
         // <li class = "list-group-item chatbubble">
         //     <div>
@@ -23,23 +23,25 @@ class UI{
         // </li>
         // `;
         const htmlElem = `
-        <li class = "list-group-item chatbubble">
+        <li class = "list-group-item chatbubble" id = "${doc.id}">
                 <div class = "d-flex justify-content-between align-items-center">
                     <div>
                         <i class="fas fa-user-circle"></i>
-                        <span class = "username">${data.username}: </span>
+                        <span class = "username">${doc.data().username}: </span>
                     </div>
                 <div class = "timestamp">${timeOfMsg}
                 </div>  
                 </div>
                     
-                <span class = "message">${data.message} </span>
+                <span class = "message">${doc.data().message} </span>
                                 
             </li>`;
         // console.log(htmlElem)
         this.list.innerHTML += htmlElem;
         // console.log(this.list.innerHTML)
         // console.log(this.list.innerHTMl);
+        // db.collection('chats').doc(doc.id).delete();
     }
+
     
 }
