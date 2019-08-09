@@ -82,7 +82,7 @@
 }
 
 .chat-list{
-    max-height: 300px;
+    max-height: 63%;
     overflow: hidden; 
     overflow-y: scroll;
     scroll-behavior: smooth;
