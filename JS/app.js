@@ -3,6 +3,9 @@ const newChatForm = document.querySelector('.new-chat-form');
 const newNameForm = document.querySelector('.new-name-form');
 const chatRoomButtons = document.querySelector('.chat-rooms-btns');
 let elm = 'html';
+const edith = document.querySelector('.edith');
+console.log(edith);
+
 VANTA.NET({
     el: elm,
     points: 8.00,
@@ -17,7 +20,7 @@ if (localStorage.getItem("username")){
     username =  localStorage.getItem("username");
 }
 else {
-    document.querySelector('.alert-info').classList.remove('d-none')
+    document.querySelector('.alert-info').classList.remove('d-none');
     username = 'Anon';
 }
 const chatroom = new Chatroom('', username);
@@ -55,4 +58,12 @@ chatRoomButtons.addEventListener('click', (event)=>{
         chatroom.changeRoom(event.target.id);
         chatroom.getchat((data)=> ui.renderElem(data));
     }
+})
+
+edith.addEventListener('click', () => {
+    document.querySelector('.alerty').classList.remove('d-none');
+    console.log('triggered')
+    document.querySelector("body > div > div.alert.alerty.alert-dark.alert-dismissible.fade.show > button").addEventListener('click', ()=> {
+        document.querySelector('.alerty').classList.add('d-none')
+    })
 })

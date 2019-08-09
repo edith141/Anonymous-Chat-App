@@ -20,6 +20,7 @@
 
 .container {
     max-width: 500px;
+    
 }
 
 .btn.room{
@@ -67,6 +68,8 @@
 
 .heading{
     font-family: 'Monoton', cursive;
+    margin-bottom: 0px;
+    color:#3295a8;
 /* font-family: 'Press Start 2P', cursive; */
 /* font-family: 'Comfortaa', cursive; */
 }
@@ -87,6 +90,13 @@
     
 }
 
+.alert-dark{
+    background-color: rgba(39, 39, 39, 0.582);
+    border: 1px solid black;
+    color: white;
+    
+    
+}
 /* .alerty{
     max-height: 20%;
     overflow: hidden scroll;
@@ -100,6 +110,7 @@
     -ms-filter:blur(3px);
     -moz-filter:blur(3px);
     -webkit-filter:blur(3px);
+    color:#ffffff;    
 }
 
 .username{
@@ -118,3 +129,44 @@
     margin: 0px;
     display: inline;
 }
+
+footer {
+    position: relative;
+    display: block;
+    
+	padding:0px 0px 10px 0px;
+	bottom:0px;
+	right:0px;}
+	
+	.inspiration {
+		text-align:center;
+		margin-bottom:2px;
+		font-family:$font-stack;
+		font-size:12px;
+		opacity:.6;}
+		.inspiration a { 
+			color:#3295a8;
+			text-decoration:none;
+		}
+		.inspiration a:hover { 
+			color:#ff7d04;
+			text-decoration:underline;
+		}
+	
+	.copyright { 
+		text-align:right;
+		font-family:$font-stack;
+		font-size:12px;
+    }
+
+    .copyright span{
+        font-family: 'Monoton', cursive;
+    }
+		.copyright a { 
+			color:#ffffff;
+			text-decoration:none;
+		}
+		.copyright a:hover, .copyright a:focus { 
+			color:#3295a8;
+			text-decoration:underline;
+		}
