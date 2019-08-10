@@ -5,8 +5,8 @@ class Chatroom {
         this.chats = db.collection('chats');
         this.unsubscribe;
     }
-
-
+    
+    
     async addChat(message) {
         const now = new Date();
         const chat = {
@@ -15,49 +15,49 @@ class Chatroom {
             room: this.room,
             created_at: firebase.firestore.Timestamp.fromDate(now)
         };
-
+        
         // const response = await this.chats.add(chat);
         // return response;
         await this.chats.add(chat);
     }
-
+    
     getchat(cb) {
         this.unsubscribe = this.chats
-            .where('room', '==', this.room)
-            .orderBy('created_at')
-            .onSnapshot((snapshot) => {
-                snapshot.docChanges().forEach((change) => {
-                    if (change.type == 'added') {
-                        cb(change.doc)
-                    }
-                })
-            });
+        .where('room', '==', this.room)
+        .orderBy('created_at')
+        .onSnapshot((snapshot) => {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type == 'added') {
+                    cb(change.doc)
+                }
+            })
+        });
     }
-
-    setUsername(userName){
+    
+    setUsername(userName) {
         this.userName = userName;
         localStorage.setItem('username', userName);
     }
-
-    changeRoom(room){
+    
+    changeRoom(room) {
         this.room = room;
         console.log(`room updated to ${this.room}`);
-        if (this.unsubscribe){
+        if (this.unsubscribe) {
             this.unsubscribe();
         }
     }
-
+    
     delAllChats() {
         this.unsubscribe = this.chats
-            .onSnapshot((snapshot) => {
-                snapshot.docChanges().forEach((change) => {
-                    if (change.type == 'added') {
-                        db.collection('chats').doc(change.doc.id).delete();
-                    }
-                })
-            });
+        .onSnapshot((snapshot) => {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type == 'added') {
+                    db.collection('chats').doc(change.doc.id).delete();
+                }
+            })
+        });
     }
-
+    
 }
 
 

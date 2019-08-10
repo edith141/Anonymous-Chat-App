@@ -16,8 +16,8 @@ VANTA.NET({
 
 
 // console.log(chatList);
-if (localStorage.getItem("username")){
-    username =  localStorage.getItem("username");
+if (localStorage.getItem("username")) {
+    username = localStorage.getItem("username");
 }
 else {
     document.querySelector('.alert-info').classList.remove('d-none');
@@ -31,39 +31,39 @@ chatroom.getchat((data) => {
     ui.renderElem(data);
 })
 
-newChatForm.addEventListener('submit', (event)=> {
-        event.preventDefault();
-        const msg = newChatForm.querySelector('#msg').value.trim();
-        chatroom.addChat(msg).then(()=>{
-            let bubbles = document.querySelectorAll(".chatbubble");
-        last = bubbles[bubbles.length-1];
+newChatForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const msg = newChatForm.querySelector('#msg').value.trim();
+    chatroom.addChat(msg).then(() => {
+        let bubbles = document.querySelectorAll(".chatbubble");
+        last = bubbles[bubbles.length - 1];
         last.scrollIntoView();
-        })
-        newChatForm.querySelector('#msg').value = "";
-        
+    })
+    newChatForm.querySelector('#msg').value = "";
+
 })
 
-newNameForm.addEventListener('submit', (event)=> {
+newNameForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const name = newNameForm.querySelector('#name').value.trim();
     chatroom.setUsername(name);
     newNameForm.querySelector('#name').value = "";
 })
 
-chatRoomButtons.addEventListener('click', (event)=>{
+chatRoomButtons.addEventListener('click', (event) => {
     console.log(event.target.tagName);
-    if(event.target.tagName == 'BUTTON' || event.target.tagName == 'SPAN'){
+    if (event.target.tagName == 'BUTTON' || event.target.tagName == 'SPAN') {
         ui.clearChats();
         console.log(event.target.id);
         chatroom.changeRoom(event.target.id);
-        chatroom.getchat((data)=> ui.renderElem(data));
+        chatroom.getchat((data) => ui.renderElem(data));
     }
 })
 
 edith.addEventListener('click', () => {
     document.querySelector('.alerty').classList.remove('d-none');
     console.log('triggered')
-    document.querySelector("body > div > div.alert.alerty.alert-dark.alert-dismissible.fade.show > button").addEventListener('click', ()=> {
+    document.querySelector("body > div > div.alert.alerty.alert-dark.alert-dismissible.fade.show > button").addEventListener('click', () => {
         document.querySelector('.alerty').classList.add('d-none')
     })
 })
