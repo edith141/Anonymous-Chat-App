@@ -7,25 +7,47 @@
     <meta name="theme-color" content="#0f041d" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Monoton|Press+Start+2P&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Monoton|Press+Start+2P&display=swap"
+        rel="stylesheet">
+
     <title>AnonChat</title>
 </head>
 
 <body>
-    
+
     <div class="container my-4">
-        <h1 class="my-4 text-center heading text-light"><span class="blur">Anon</span>Chat</h1>
-        <div class="alert alerty alert-info alert-dismissible fade show d-none" role="alert">
-                <strong>Welcome Anonymous User!</strong><br>This is an Anonymous chatting platform.<br>Click on the buttons below to switch to a chatroom. <br>Use the field below to change your username.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+        <h1 class="text-center heading"><span class="blur">Anónimo</span>TXT</h1>
+        <footer class="text-light">
+            <!-- <div class="inspiration">
+                Inspiration <a href="https://www.freecodecamp.com/naimjeem" target="_blank"><b>FreeCodeCamp</b></a>
+            </div> -->
+
+            <div class="copyright">
+                by <i class="fas fa-dragon"></i> <span class="edith">EDITH</span>
             </div>
+        </footer>
+        <div class="alert alert-info alert-dismissible fade show d-none" role="alert">
+            <strong>Welcome Anonymous User!</strong><br>This is an Anonymous chatting platform.<br>Click on the buttons
+            below to switch to a chatroom. <br>Use the field below to change your username.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alerty alert-dark alert-dismissible fade show d-none" role="alert">
+            <strong><i class="fas fa-dragon"></i> <span class="edith">EDITH</span></strong>
+            <br>TI'm a web developer, ML enthusiast, and love to try new new things.<br>
+            Follow me on:<br>
+            <i class="fab fa-github-square fa-2x"></i>&nbsp;
+            <i class="fab fa-facebook-square fa-2x"></i>&nbsp;
+            <i class="fab fa-twitter-square fa-2x"></i>&nbsp;
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <div class="chat-rooms-btns mb-3 text-light text-center">
-            
+
             <button class="btn btn-primary raised room" id="general">
                 <i class="fas fa-comment-dots"></i>
                 <span class="room-btn-txt" id="general">GENERAL</span>
@@ -43,90 +65,101 @@
                 <span class="room-btn-txt" id="movies">MOVIES</span>
             </button>
         </div>
-            
-            
-            <!-- CHATS -->
-            <div class="chatting-area">
-                <ul class="chat-list list-group">
-                    
-                </ul>
-            </div>
-            
-            <div>
-                <!-- NEW MSG -->
-                <form class="new-chat-form my-3">
-                    <div class="input-group">
-                        <!-- <div class="input-group-prepend">
-                            <div class="input-group-text">New Message</div>
-                        </div> -->
-                        <input type="text" autocomplete="off" placeholder="Type a message" name="" id="msg" class="form-control" required>
-                        <div class="input-group-append">
-                            <button type="submit" value="send" class="btn send-btns btn-danger">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                
-                <!-- UPDATE NAME -->
-                <form action="" class="new-name-form my-3">
-                    <div class="input-group">
-                        <!-- <div class="input-group-prepend">
-                            <div class="input-group-text">Update Name</div>
-                        </div> -->
-                        <input type="text" autocomplete="off" placeholder="Update username" name="" id="name" class="form-control" required>
-                        <div class="input-group-append">
-                            <button type="button" value="update" class="btn send-btns btn-info">
-                                <i class="fas fa-user-edit fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>    
-            </div>
+
+
+        <!-- CHATS -->
+        <div class="chatting-area">
+            <ul class="chat-list list-group">
+
+            </ul>
         </div>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
-        <script src="https://kit.fontawesome.com/33c4382f99.js"></script>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
-        
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#config-web-app -->
-            
-            <script>
-                // Your web app's Firebase configuration
-                var firebaseConfig = {
-                    apiKey: "AIzaSyA3xFvL74p-Z802xacDwK7T4V6WYIBBdpA",
-                    authDomain: "anon-chat-room-0141.firebaseapp.com",
-                    databaseURL: "https://anon-chat-room-0141.firebaseio.com",
-                    projectId: "anon-chat-room-0141",
-                    storageBucket: "anon-chat-room-0141.appspot.com",
-                    messagingSenderId: "933794938426",
-                    appId: "1:933794938426:web:fa70a7ecc5d16346"
-                };
-                // Initialize Firebase
-                firebase.initializeApp(firebaseConfig);
-                const db = firebase.firestore();
-            </script>
-            <script src="three.r92.min.js"></script>
-            <script src="vanta.net.min.js"></script>
-            <script src="JS/chat.js"></script>
-            <script src="JS/ui.js"></script>
-            <script src="JS/app.js"></script>
-            
-            <script>
-                // VANTA.NET({
-                    //     el: elm,
-                    //     points: 8.00,
-                    //     maxDistance: 20.00,
-                    //     color: 0xb3446,
-                    //     backgroundColor: 0x100820
-                    // })
-                </script>
-            </body>
-            
-            </html>
+
+        <div>
+            <!-- NEW MSG -->
+            <form class="new-chat-form my-3">
+                <div class="input-group">
+                    <!-- <div class="input-group-prepend">
+                        <div class="input-group-text">New Message</div>
+                    </div> -->
+                    <input type="text" autocomplete="off" placeholder="Type a message" name="" id="msg"
+                        class="form-control" required>
+                    <div class="input-group-append">
+                        <button type="submit" value="send" class="btn send-btns btn-danger">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- UPDATE NAME -->
+            <form action="" class="new-name-form my-3">
+                <div class="input-group">
+                    <!-- <div class="input-group-prepend">
+                        <div class="input-group-text">Update Name</div>
+                    </div> -->
+                    <input type="text" autocomplete="off" placeholder="Update username" name="" id="name"
+                        class="form-control" required>
+                    <div class="input-group-append">
+                        <button type="button" value="update" class="btn send-btns btn-info">
+                            <i class="fas fa-user-edit fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://kit.fontawesome.com/33c4382f99.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA3xFvL74p-Z802xacDwK7T4V6WYIBBdpA",
+            authDomain: "anon-chat-room-0141.firebaseapp.com",
+            databaseURL: "https://anon-chat-room-0141.firebaseio.com",
+            projectId: "anon-chat-room-0141",
+            storageBucket: "anon-chat-room-0141.appspot.com",
+            messagingSenderId: "933794938426",
+            appId: "1:933794938426:web:fa70a7ecc5d16346"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="three.r92.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script src="JS/chat.js"></script>
+    <script src="JS/ui.js"></script>
+    <script src="JS/app.js"></script>
+
+    <script>
+            // VANTA.NET({
+                //     el: elm,
+                //     points: 8.00,
+                //     maxDistance: 20.00,
+                //     color: 0xb3446,
+                //     backgroundColor: 0x100820
+                // })
+    </script>
+</body>
+
+</html>
