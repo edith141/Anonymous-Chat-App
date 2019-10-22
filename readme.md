@@ -25,12 +25,9 @@ Use your Firebase configuration.
 
 [LIVE DEMO](http://hbd-mar-vell.000webhostapp.com/Anon-Chat/index.html)
 
-### Welcome screen
+### Welcome screen, Chats and chat-rooms
 
-[![Image from Gyazo](https://i.gyazo.com/e87d53e5c8137c27b49ffb8d9eacb127.png)](https://gyazo.com/e87d53e5c8137c27b49ffb8d9eacb127)
-
-### Chats and Rooms
-[![Image from Gyazo](https://i.gyazo.com/cf0db2dddd64c04e47632c0fd6da0f4b.png)](https://gyazo.com/cf0db2dddd64c04e47632c0fd6da0f4b)
+![](https://i.gyazo.com/cc0511e708009c217acf83c6ffdaab1a.png)
 
 
 
