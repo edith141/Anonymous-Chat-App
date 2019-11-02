@@ -34,11 +34,8 @@ chatroom.getchat((data) => {
 newChatForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const msg = newChatForm.querySelector('#msg').value.trim();
-    chatroom.addChat(msg).then(() => {
-        let bubbles = document.querySelectorAll(".chatbubble");
-        last = bubbles[bubbles.length - 1];
-        last.scrollIntoView();
-    })
+    chatroom.addChat(msg)
+    //clear msg value
     newChatForm.querySelector('#msg').value = "";
 
 })
